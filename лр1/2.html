@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛР1 — Введення ПІБ</title>
+</head>
+<body>
+  <h1>ЛР1.2 — Введення ПІБ</h1>
+
+  <ul id="nameList"></ul>
+
+  <script>
+    const list = document.getElementById('nameList');
+
+    while (true) {
+      let fullName = prompt("Введіть прізвище та ім'я (для того, щоб завершити натисніть 'Скасувати'):");
+      if (fullName === null) {
+        break;
+      }
+      const li = document.createElement('li');
+      li.textContent = fullName;
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>
