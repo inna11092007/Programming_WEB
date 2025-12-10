@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛР1 — Літери імені Інна</title>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding: 24px; }
+    h1 { margin-bottom: 10px; }
+    ul { display: flex; gap: 10px; padding-left: 0; list-style: none; }
+    li {
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .12s ease, background .12s ease;
+    }
+    li:hover { background: #f1f5f9; transform: translateY(-1px); }
+    .note { margin-top: 10px; color: #64748b; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>ЛР1 — Літери імені</h1>
+
+  <div id="container"></div>
+  <div class="note">Наведіть курсор на літеру — з’явиться alert.</div>
+
+  <script>
+    // П.1 (рівень 10–12):
+    // Створити список (ul) з літерами вашого імені.
+    // Кожен елемент при наведенні показує alert із цією літерою.
+
+    const myName = "Інна";
+
+    const container = document.getElementById("container");
+    const ul = document.createElement("ul");
+
+    [...myName].forEach((letter) => {
+      const li = document.createElement("li");
+      li.textContent = letter;
+
+      // mouseenter — акуратніше, ніж mouseover
+      li.addEventListener("mouseenter", () => alert(letter));
+
+      ul.appendChild(li);
+    });
+
+    container.appendChild(ul);
+  </script>
+</body>
+</html>

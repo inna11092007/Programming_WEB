@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛР1 — Ввід ПІБ до «Відміна»</title>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding: 24px; }
+    h1 { margin-bottom: 8px; }
+    p  { color: #475569; margin-bottom: 14px; }
+    ul { padding-left: 18px; }
+    li { margin: 4px 0; }
+    .counter { margin-top: 10px; font-size: 13px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <h1>ЛР1 — Ввід прізвища та імені до «Відміна»</h1>
+  <p>
+    Введення триває, доки у будь-якому вікні введення не буде натиснуто «Відміна».
+    Після кожного введення ПІБ запис додається у список.
+  </p>
+
+  <h2>Введені прізвища та імена:</h2>
+  <ul id="people"></ul>
+  <div class="counter" id="counter"></div>
+
+  <script>
+    // П.2 (рівень 10–12):
+    // Запитувати прізвища та імена до натискання "Відміна".
+    // Відображати у браузері після кожного введення.
+
+    const list = document.getElementById("people");
+    const counter = document.getElementById("counter");
+
+    function updateCounter() {
+      counter.textContent = `Додано записів: ${list.children.length}`;
+    }
+
+    while (true) {
+      const last = prompt("Введіть прізвище (для завершення натисніть «Скасувати»):");
+      if (last === null) break;
+
+      const first = prompt("Введіть ім’я (для завершення натисніть «Скасувати»):");
+      if (first === null) break;
+
+      const l = last.trim();
+      const f = first.trim();
+
+      // Якщо пусто — повторити цикл без додавання
+      if (!l || !f) continue;
+
+      const li = document.createElement("li");
+      li.textContent = `${l} ${f}`;
+      list.appendChild(li);
+
+      updateCounter();
+    }
+
+    updateCounter();
+  </script>
+</body>
+</html>

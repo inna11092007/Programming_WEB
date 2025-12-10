@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛР1 — Блоки прізвища Цимбаліста</title>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding: 24px; }
+    h1 { margin-bottom: 10px; }
+
+    #btn{
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background: #0f172a;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .12s ease, opacity .12s ease;
+    }
+    #btn:hover{ transform: translateY(-1px); opacity: .95; }
+
+    #letters{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    #letters .letter-box{
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: 700 16px/1 system-ui, Arial, sans-serif;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease;
+    }
+    #letters .letter-box:hover{
+      background: #eef2ff;
+      transform: translateY(-1px);
+    }
+
+    .note{ margin-top: 10px; font-size: 13px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <h1>ЛР1 — Блоки з літерами прізвища</h1>
+
+  <button id="btn">Показати блоки</button>
+  <div id="letters"></div>
+  <div class="note">
+    При наведенні на блок з’явиться alert «Це літера ...».
+    Повторне натискання кнопки очищає контейнер.
+  </div>
+
+  <script>
+    // П.3 (рівень 10–12):
+    // Кнопка «Показати блоки» + контейнер id="letters".
+    // При натисканні:
+    // - для кожної літери прізвища створити div
+    // - додати у контейнер
+    // - при наведенні показати alert «Це літера [ ]»
+    // При повторному натисканні — очистити.
+
+    const lastName = "Цимбаліста";
+
+    const btn = document.getElementById("btn");
+    const box = document.getElementById("letters");
+
+    btn.addEventListener("click", () => {
+      // Якщо вже є блоки — очищаємо
+      if (box.children.length > 0) {
+        box.innerHTML = "";
+        btn.textContent = "Показати блоки";
+        return;
+      }
+
+      // Інакше створюємо блоки
+      for (const ch of lastName) {
+        const div = document.createElement("div");
+        div.className = "letter-box";
+        div.textContent = ch;
+
+        div.addEventListener("mouseenter", () => {
+          alert(`Це літера ${ch}`);
+        });
+
+        box.appendChild(div);
+      }
+
+      btn.textContent = "Очистити";
+    });
+  </script>
+</body>
+</html>
