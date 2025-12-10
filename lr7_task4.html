@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР7 – Завдання 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lr7_task4.css">
+    <script src="lr7_task4.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <div class="head">
+                <div class="badge">4</div>
+                <div>
+                    <h1>Порівняння двох чисел</h1>
+                    <p class="sub">Promise з затримкою 1 сек</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <label>
+                    Перше число
+                    <input type="number" id="num1" placeholder="Напр. 7">
+                </label>
+
+                <label>
+                    Друге число
+                    <input type="number" id="num2" placeholder="Напр. 12">
+                </label>
+
+                <button id="compareBtn">Порівняти</button>
+            </div>
+
+            <div id="loader" class="loader" style="display:none;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="loader-text">Завантаження...</span>
+            </div>
+
+            <div id="result" class="result"></div>
+
+            <a class="back" href="index.html">На головну</a>
+        </div>
+    </div>
+</body>
+</html>

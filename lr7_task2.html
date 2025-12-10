@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР7 – Завдання 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lr7_task2.css">
+    <script src="lr7_task2.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <div class="head">
+                <div class="badge">2</div>
+                <div>
+                    <h1>Перевірка числа</h1>
+                    <p class="sub">Promise: більше 10 чи ні</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <label>
+                    Введи число
+                    <input type="number" id="numberInput" placeholder="Напр. 7 або 15">
+                </label>
+                <button id="checkBtn">Перевірити</button>
+            </div>
+
+            <div id="loader" class="loader" style="display:none;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="loader-text">Завантаження...</span>
+            </div>
+
+            <div id="result" class="result"></div>
+
+            <a class="back" href="index.html">На головну</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 1 – Завдання 4</title>
+    <link rel="stylesheet" href="pr1_task4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Практична робота 1</h1>
+        <h2>Завдання 4: Обробка та аналіз даних про книги</h2>
+
+        <section class="controls">
+            <button id="btn-unread">Непрочитані</button>
+
+            <div class="author-block">
+                <label for="authorInput">Автор:</label>
+                <input type="text" id="authorInput" placeholder="Наприклад: J.R.R. Tolkien">
+                <button id="btn-by-author">Пошук</button>
+            </div>
+
+            <button id="btn-top-rated">Топові (рейтинг &gt; 4)</button>
+        </section>
+
+        <section class="output">
+            <h3>Результат</h3>
+            <pre id="output"></pre>
+        </section>
+    </div>
+
+    <script src="pr1_task4.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР5 – Завдання 5 (Капча)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lr5_task5.css">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <main class="page">
+        <section class="container">
+            <div class="title">
+                <h1>Лабораторна робота 5</h1>
+                <div class="subtitle">Завдання 5 — Капча</div>
+                <div class="author">Дидяк Іри</div>
+                <div class="divider"></div>
+            </div>
+
+            <p class="description">
+                Введіть число з капчі. Кількість цифр задається ініціалізацією.
+            </p>
+
+            <div class="captcha-card">
+                <div class="captcha-display" id="captcha-display"></div>
+            </div>
+
+            <div class="input-row">
+                <input type="text" id="captcha-input" inputmode="numeric" autocomplete="off" placeholder="Введіть число">
+            </div>
+
+            <div class="buttons">
+                <button class="btn" id="check-btn">Перевірити</button>
+                <button class="btn btn-secondary" id="refresh-btn">Оновити капчу</button>
+            </div>
+
+            <div class="message" id="captcha-message"></div>
+
+            <a class="back-link" href="index.html">← На головну сторінку</a>
+        </section>
+    </main>
+
+    <script src="lr5_task5.js"></script>
+</body>
+</html>

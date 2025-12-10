@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 1 – Завдання 1</title>
+    <link rel="stylesheet" href="pr1_task1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Практична робота 1</h1>
+        <h2>Завдання 1 – Фільтрація та пошук товарів</h2>
+
+        <section class="block">
+            <h3>Доступні товари (inStock &gt; 0)</h3>
+            <button id="showAvailableBtn">Показати наявні товари</button>
+
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Назва</th>
+                        <th>Категорія</th>
+                        <th>Ціна</th>
+                        <th>На складі</th>
+                    </tr>
+                </thead>
+                <tbody id="productsBody"></tbody>
+            </table>
+        </section>
+
+        <section class="block">
+            <h3>Пошук товару за назвою</h3>
+            <div class="search-row">
+                <input type="text" id="searchName" placeholder="Введіть назву товару">
+                <button id="searchBtn">Знайти</button>
+            </div>
+            <div id="searchResult"></div>
+        </section>
+    </div>
+
+    <script src="pr1_task1.js" defer></script>
+</body>
+</html>

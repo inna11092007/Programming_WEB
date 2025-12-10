@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#start {
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#loader {
+    margin-top: 10px;
+    font-weight: bold;
+    color: blue;
+}
+
+#result {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

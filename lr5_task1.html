@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР 5 – Завдання 1. Конвертер температур</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lr5_task1.css">
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <div class="head">
+                <div class="course">Мови програмування для Web</div>
+                <h1>Конвертер температур</h1>
+                <div class="sub">Фаренгейт ↔ Цельсій</div>
+                <div class="author">Інна Цимбаліста</div>
+            </div>
+
+            <div class="fields">
+                <label class="field">
+                    <span>Температура за Фаренгейтом (°F)</span>
+                    <input id="fahrenheit" type="text" inputmode="decimal" placeholder="Введіть значення F">
+                </label>
+
+                <label class="field">
+                    <span>Температура за Цельсієм (°C)</span>
+                    <input id="celsius" type="text" inputmode="decimal" placeholder="Введіть значення C">
+                </label>
+            </div>
+
+            <div class="hint">
+                Обчислення запускається при зміні числа в полі.<br>
+                Формула: C = 5/9 · (F − 32)
+            </div>
+        </div>
+    </div>
+
+    <script src="lr5_task1.js"></script>
+</body>
+</html>

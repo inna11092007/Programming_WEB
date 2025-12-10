@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255,255,255,0.55), transparent 35%),
+        radial-gradient(circle at 88% 82%, rgba(255,255,255,0.45), transparent 40%),
+        linear-gradient(135deg, #f6fbff, #f8fff9, #fff9f2);
+    color: #0f172a;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 22px;
+    padding: 26px 26px 24px;
+    box-shadow:
+        0 12px 34px rgba(2, 6, 23, 0.08),
+        0 2px 10px rgba(2, 6, 23, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.course {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 6px;
+}
+
+h1 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 700;
+}
+
+.sub {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.author {
+    margin-top: 6px;
+    font-size: 12.5px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.score {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(2, 132, 199, 0.06);
+    border: 1px solid rgba(2, 132, 199, 0.12);
+    margin-top: 8px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 14px 0 6px;
+}
+
+.btn {
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.btn.primary {
+    border: 1px solid rgba(2, 132, 199, 0.35);
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(16, 185, 129, 0.12));
+    box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(2, 6, 23, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.question {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 14px 12px;
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.03);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    margin: 10px 0 14px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answers {
+    display: grid;
+    gap: 8px;
+    padding: 4px 2px 2px;
+}
+
+.answer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(2, 6, 23, 0.08);
+    background: #ffffff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.answer-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(2, 6, 23, 0.06);
+}
+
+.answer-item input[type="radio"] {
+    width: 16px;
+    height: 16px;
+}
+
+.answer-text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.result {
+    min-height: 22px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.result.ok {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.18);
+}
+
+.result.bad {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.18);
+}
