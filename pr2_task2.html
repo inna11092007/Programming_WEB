@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 2 – Завдання 2 (2.1–2.5)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pr2_task2.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="top">
+            <h1>Практична робота 2</h1>
+            <h2>Завдання 2: 2.1–2.5 в одному файлі</h2>
+            <a class="back" href="pr2.html">← Назад до практичної 2</a>
+        </header>
+
+        <main class="grid">
+            <section class="card">
+                <h3>2.1 — час щосекунди + повідомлення через 60 с</h3>
+                <p class="desc">Запуск вручну. Через 60 секунд після старту буде alert.</p>
+                <div id="t21" class="time-box">--:--:--</div>
+                <div class="row">
+                    <button id="b21start">Запустити</button>
+                    <button id="b21stop">Зупинити</button>
+                </div>
+                <div id="s21" class="status"></div>
+            </section>
+
+            <section class="card">
+                <h3>2.2 — оновлення кожні 5 с + спроба закриття через 30 с</h3>
+                <p class="desc">Браузер може не дозволити закриття — це нормально.</p>
+                <div id="t22" class="time-box">--:--:--</div>
+                <div class="row">
+                    <button id="b22start">Запустити</button>
+                    <button id="b22stop">Зупинити</button>
+                </div>
+                <div id="s22" class="status"></div>
+                <div class="hint">Якщо вкладка не закрилась — браузер блокує window.close().</div>
+            </section>
+
+            <section class="card">
+                <h3>2.3 — секундомер з “вмиканням” хвилин і годин</h3>
+                <p class="desc">Спочатку секунди, потім хвилини, потім години.</p>
+                <div id="t23" class="time-box small">00</div>
+                <div class="row">
+                    <button id="b23start">Запустити</button>
+                    <button id="b23stop">Зупинити</button>
+                    <button id="b23reset">Скинути</button>
+                </div>
+                <div id="s23" class="status"></div>
+            </section>
+
+            <section class="card">
+                <h3>2.4 — оновлення кожні 30 с + попередження</h3>
+                <p class="desc">При кожному оновленні з’являється alert.</p>
+                <div id="t24" class="time-box">--:--:--</div>
+                <div class="row">
+                    <button id="b24start">Запустити</button>
+                    <button id="b24stop">Зупинити</button>
+                </div>
+                <div id="s24" class="status"></div>
+            </section>
+
+            <section class="card full">
+                <h3>2.5 — час + кнопка ручного оновлення</h3>
+                <p class="desc">Показує поточний час і оновлює його по кнопці.</p>
+                <div id="t25" class="time-box">--:--:--</div>
+                <div class="row">
+                    <button id="b25update">Оновити час</button>
+                </div>
+                <div id="s25" class="status"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="pr2_task2.js"></script>
+</body>
+</html>

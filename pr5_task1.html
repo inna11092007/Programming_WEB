@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практична 5 – Завдання 1 (ToDo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr5.css">
+</head>
+<body>
+    <div class="blobs">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+    </div>
+
+    <div class="wrapper">
+        <div class="panel">
+            <div class="header">
+                <div class="badge">ПР5</div>
+                <div class="head-text">
+                    <span class="label">Мови програмування для Web</span>
+                    <h1>Практична робота 5</h1>
+                    <div class="meta">Студентка: <strong>Цимбаліста Інна</strong></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="todo-card">
+                    <div class="todo-title">ToDo List</div>
+
+                    <input
+                        id="new-task-input"
+                        type="text"
+                        placeholder="Додай завдання і натисни Enter"
+                        autocomplete="off"
+                    />
+
+                    <div class="filters">
+                        <button data-filter="all" class="filter-btn active">Усі</button>
+                        <button data-filter="active" class="filter-btn">Невиконані</button>
+                        <button data-filter="completed" class="filter-btn">Виконані</button>
+                    </div>
+
+                    <ul id="tasks-list"></ul>
+
+                    <div class="tiny-foot">
+                        Двічі клік — редагування. Enter — зберегти.
+                    </div>
+                </div>
+
+                <div class="nav-row">
+                    <a class="btn btn-secondary" href="pr5.html">Назад</a>
+                    <a class="btn btn-secondary" href="index.html">На головну</a>
+                </div>
+            </div>
+
+            <div class="footer">
+                © Цимбаліста Інна • Практична робота 5
+            </div>
+        </div>
+    </div>
+
+    <script src="pr5.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    padding-top: 60px;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 56px;
+    background: #ffffff;
+    border-bottom: 2px solid #8a2be2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 18px;
+    z-index: 10;
+}
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid rgba(138, 43, 226, 0.25);
+}
+
+.cart-icon:hover {
+    background: rgba(138, 43, 226, 0.08);
+}
+
+.cart-emoji {
+    font-size: 22px;
+}
+
+.cart-count {
+    min-width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #8a2be2;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    padding: 0 6px;
+}
+
+h2 {
+    width: max-content;
+    margin: 20px auto 50px;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #333;
+}
+
+.wrap {
+    position: relative;
+    width: 90%;
+    min-width: 1000px;
+    height: 600px;
+    border: 2px solid #8a2be2;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swipe {
+    display: block;
+    background: white;
+    color: #8a2be2;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #8a2be2;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.swipe:hover {
+    background-color: #8a2be2;
+    transition: all 0.5s ease;
+}
+
+.swipe:active {
+    color: white;
+    transition: all 0s ease;
+}
+
+.swipe_left {
+    left: -19px;
+    top: 99px;
+}
+
+.swipe_right {
+    right: -19px;
+    top: 99px;
+}
+
+.product_card {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    float: left;
+    border-right: 2px solid #8a2be2;
+    padding-top: 20px;
+}
+
+.product_card:last-child {
+    border-right: none;
+}
+
+.sticker {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    top: -50px;
+    left: calc(100% - 120px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.sticker_novetly {
+    background-color: #ff69b4;
+}
+
+.sticker_top {
+    background-color: #8a2be2;
+}
+
+.category {
+    height: 20%;
+    width: 80%;
+    text-align: center;
+    line-height: 120px;
+    border-bottom: 2px solid #8a2be2;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.image {
+    height: 40%;
+    width: 80%;
+    margin: 10px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.name_product {
+    height: 10%;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    margin: 10px auto;
+}
+
+.name_product a:hover,
+.category a:hover {
+    color: #ff1493;
+    transition: color 0.3s ease;
+}
+
+.price {
+    height: 10%;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px auto;
+}
+
+.old_price {
+    color: gray;
+    font-size: 16px;
+    text-decoration: 2px line-through;
+}
+
+.new_price {
+    color: red;
+    font-weight: bold;
+}
+
+.stub,
+.btn {
+    display: block;
+    height: 40px;
+    width: 150px;
+    color: white;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.stub {
+    background-color: #ff69b4;
+    padding: 8px 10px;
+    height: auto;
+    min-height: 40px;
+    line-height: 1.2;
+    font-size: 14px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+button.btn {
+    all: unset;
+    display: block;
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: #8a2be2;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+button.btn:hover {
+    background-color: #8f5fbb;
+}
+
+button.btn:active {
+    color: #25ee22;
+    background-color: white;
+    border: 2px solid #25ee22;
+    line-height: 36px;
+}
+
+.link:link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: black;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    padding: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-card {
+    width: min(420px, 96vw);
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 18px 16px;
+    border: 2px solid #8a2be2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.modal-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.modal-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-input {
+    width: 120px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #8a2be2;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.modal-btn {
+    all: unset;
+    cursor: pointer;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 2px solid #8a2be2;
+    background: #8a2be2;
+    color: #fff;
+    min-width: 140px;
+}
+
+.modal-btn.secondary {
+    background: #fff;
+    color: #8a2be2;
+}
+
+.modal-btn:hover {
+    filter: brightness(1.05);
+}
